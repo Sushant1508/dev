@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router-dom';
+//import { browserHistory } from 'react-router-dom';
 
 class CarDetail extends Component {
     handleRedirect(){
@@ -7,7 +7,8 @@ class CarDetail extends Component {
     }
     render(){
         const cars = this.props.data;
-        const id = this.props.id;
+        const id = this.props.match.params.id;
+        //console.log("props "+this.props);
         const car = cars.filter(car => {
             if(car.id == id) {
                 return car;
