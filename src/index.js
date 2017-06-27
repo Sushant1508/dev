@@ -3,18 +3,13 @@ import { render } from 'react-dom';
 //import { browserHistory } from 'react-router'
 // Import routing components
 import {BrowserRouter,Route,browserHistory} from 'react-router-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Main from './common/main.component'
 import Home from './common/home.component'
 import About from './common/about.component'
 import Car from './car/car.component'
 import CarDetail from './car/car-detail.component'
-import TableExampleSimple from './components/customTable'
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-injectTapEventPlugin();
+
 const data = [
     {
         id: 1,
@@ -67,16 +62,13 @@ const data = [
 
 
 render(
-    /*<BrowserRouter history={browserHistory}>
+    <BrowserRouter history={browserHistory}>
         <Main>
             <Route path="/" component={Home}/>
-            <Route path="/cars" render={()=><Car data={data}/> }/>  
-            { Parameter route}          
+             <Route path="/cars" render={ (props)=><Car data={data}/> }/>          
             <Route path="/cars/:id" render={(props)=><CarDetail data={data} {...props}/> }/>
             <Route path="/about" component={About}/>
         </Main>
-    </BrowserRouter>*/
-
-    <TableExampleSimple/>,
+    </BrowserRouter>,
     document.getElementById('app')
 );
