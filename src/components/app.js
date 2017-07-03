@@ -9,7 +9,7 @@ class App extends React.Component{
 render(){
     return(
       <div className="container-fluid">
-      <h2>Itinerary Page</h2>
+      <h2 style={{marginLeft:'20'}}>Itinerary Page</h2>
           <FlightCardComponent/>
       </div>
     );

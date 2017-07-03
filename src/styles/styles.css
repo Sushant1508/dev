@@ -1,0 +1,10 @@
+ .viewmoredetails-address {
+    font-size: 11px;
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+.pricetext {
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 22px;
+    }
