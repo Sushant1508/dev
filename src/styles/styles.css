@@ -1,10 +1,65 @@
- .viewmoredetails-address {
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/MaterialIcons-Regular.eot);
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+.pricetext {
+       font-size: 12px;
+       font-weight: 700;
+       margin-right: 22px;
+   }
+
+   .viewmoredetails-address {
     font-size: 11px;
     padding-top: 5px;
     text-transform: capitalize;
+  }
+
+
+  .airportcode {
+      font-size: 11px;
+      padding-top: 5px;
+  }
+
+  .booking-itenerary-left-icon {
+    height: 30px;
+    padding: 0px 5px;
 }
-.pricetext {
-        font-size: 12px;
-        font-weight: 700;
-        margin-right: 22px;
-    }
+
+.booking-itenerary-viewmore {
+    font-size: 12px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px 15px 0px 15px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+.viewmoredetails-text {
+    font-size: 11px;
+    text-transform: capitalize;
+}

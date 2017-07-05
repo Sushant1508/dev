@@ -3,7 +3,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import {render} from 'react-dom';
-import {BrowserRouter as Router, browserHistory,Route} from 'react-router-dom';
+//import {BrowserRouter as Router, browserHistory,Route} from 'react-router-dom';
 import RouteConfig from './routes';
 import './styles/styles.css';
 //import '../node_modules/bootstrap/dist/css/bootstrap.css';

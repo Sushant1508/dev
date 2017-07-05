@@ -11,10 +11,10 @@ const RouteConfig =(props)=>{
   return(
   <BrowserRouter history ={browserHistory} >
    <div>
-      <App>
+      <Route exact path="/" component={App}/>
       <Route path="/about" component={AboutPage}/>
       <Route path="/home" component={HomePage}/>
-      </App>
+      
    </div>
   </BrowserRouter>
   );

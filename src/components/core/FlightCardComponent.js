@@ -8,29 +8,74 @@ import Col from 'muicss/lib/react/col';
 
 const paperStyle = {
   margin: 20,
-  backgroundColor:'white',
-      height: 120
+  backgroundColor:'white'
 };
 
+const Eminities =(props)=>{
+  return(
+    <Row>
+      <Col md-offset="3" md="5" style={{borderWidth: '1px', borderColor: 'rgb(189, 189, 189)', backgroundColor: 'rgb(245, 245, 245)', color: 'rgba(0, 0, 0, 0.87)'}}>
+      <Row>
+            <Col md="1" className="material-icons"   style={{color: 'rgb(158, 158, 158)'}}>restaurant</Col>
+            <Col  md="3">
+              <div className="viewmoredetails-text" >&nbsp;Snack or Brunch</div>
+            </Col>
 
- const FlightCardComponent =()=>{
+            <Col md="1" className="material-icons"   style={{color: 'rgb(158, 158, 158)'}}>business_center</Col>
+            <Col  md="3">
+              <div className="viewmoredetails-text" >&nbsp;Baggage : 15&nbsp;kg</div>
+            </Col>
+
+
+            <Col  md="4">
+              <div className="viewmoredetails-text" >Check-in : N/A</div>
+            </Col>
+      </Row>
+      </Col>
+    </Row>
+  );
+
+};
+
+ class FlightCardComponent extends React.Component {
+   constructor () {
+   super();
+   this.state = {
+     isHidden: false
+   };
+ }
+
+ toggleHidden () {
+   this.setState({
+     isHidden: !this.state.isHidden
+   });
+ }
+
+  render(){
   return(
         <Paper zDepth={2} style={paperStyle}>
           <Container fluid={'true'}>
           <Row>
+            <Col>
+                <div  style={{backgroundColor: 'green' , width : '25px' ,borderBottomRightRadius: '5px'}} className="booking-itenerary-left-icon">
+                  <i className="material-icons">flight_takeoff</i>
+                </div>
+            </Col>
+          </Row>
+          <Row>
             <Col xs="12" md="10">
             <Row>
-              <Col xs="2" md="2">
-                <img ng-src="https://4ctnedevblob.blob.core.windows.net/assets/9W.png" alt="Jet Airways" src="https://4ctnedevblob.blob.core.windows.net/assets/9W.png"/>
-                                   <div className="airportcode">
+              <Col md="2" xs="2" xs-offset="1" md-offset="1" >
+                <img alt="Jet Airways" src="https://4ctnedevblob.blob.core.windows.net/assets/9W.png"/>
+                                  <div className="airportcode">
                                       Jet Airways
                                   </div>
-                                   <div className="airportcode ">
+                                  <div className="airportcode ">
                                       9W - 665
                                   </div>
                 </Col>
                 <Col xs="3" md="3">
-                <div style={{align:'center'}}><b className="ng-binding">02:10</b></div>
+                <div style={{align:'center'}}><b>02:10</b></div>
                                 <div className="viewmoredetails-address">
                                   <div  >
                                     Jul 10, 2017, BLR
@@ -44,14 +89,12 @@ const paperStyle = {
                                 </div>
                 </Col>
                 <Col xs="2" md="2">
-                <div className="duration ">2h 30min</div>
-                                <div layout="row" layout-align="center" >
-                                  {/*  <img src="/assets/images/arrow-thin.png"/> */}
-                                </div>
+                    <div className="duration ">2h 30min</div>
+                    <i className="material-icons">trending_flat</i>
                 </Col>
 
 
-                <Col xs="4" md="4">
+                <Col xs="3" md="3">
                     <div><b >04:40</b></div>
                     <div className="viewmoredetails-address">
                       <div >Jul 10, 2017, CCU</div>
@@ -65,13 +108,28 @@ const paperStyle = {
             </Col>
             <Col xs="12" md="2">
             <Row>
-                  <div class="pricetext">AUD 130.50</div>
+                  <div className="pricetext">AUD 130.50</div>
             </Row>
             </Col>
+            </Row>
+            <Row>
+              &nbsp;
+            </Row>
+
+            {this.state.isHidden && <Eminities/>}
+            <Row>
+              &nbsp;
+            </Row>
+            <Row>
+            <div  role="button" >
+              <span onClick={this.toggleHidden.bind(this)} className="booking-itenerary-viewmore cursor" style={{backgroundColor: 'rgb(46, 125, 50)', color: 'rgba(255, 255, 255, 0.87)',marginLeft: '45%'}}>View More</span>
+              <div style={{backgroundColor: 'green',height: '2px'}}></div>
+            </div>
             </Row>
 
           </Container>
         </Paper>
-);
-};
+      );
+    }
+}
 export default FlightCardComponent;
