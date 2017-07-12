@@ -43,6 +43,8 @@ const Eminities =(props)=>{
    this.state = {
      isHidden: false
    };
+
+    this.toggleHidden=this.toggleHidden.bind(this);
  }
 
  toggleHidden () {
@@ -50,6 +52,8 @@ const Eminities =(props)=>{
      isHidden: !this.state.isHidden
    });
  }
+
+
 
   render(){
   return(
@@ -122,7 +126,7 @@ const Eminities =(props)=>{
             </Row>
             <Row>
             <div  role="button" >
-              <span onClick={this.toggleHidden.bind(this)} className="booking-itenerary-viewmore cursor" style={{backgroundColor: 'rgb(46, 125, 50)', color: 'rgba(255, 255, 255, 0.87)',marginLeft: '45%'}}>View More</span>
+              <span onClick={this.toggleHidden} className="booking-itenerary-viewmore cursor" style={{backgroundColor: 'rgb(46, 125, 50)', color: 'rgba(255, 255, 255, 0.87)',marginLeft: '45%'}}>View More</span>
               <div style={{backgroundColor: 'green',height: '2px'}}></div>
             </div>
             </Row>
